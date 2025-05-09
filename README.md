@@ -23,14 +23,14 @@ Antes de começar, você precisa ter instalado:
 
 ---
 
-1. **Create Database**: On your local Sql Server create a new database called 'InfoDiseaseDB' and on the Infrastructure layer execute :
+1. **Criar Banco de Dados**: No seu Sql Server local, crie um novo banco de dados chamado 'InfoDiseaseDB' e, na camada de Infraestrutura, execute: :
 
 dotnet ef migrations add InitialCreate --startup-project "../Presentation"
 dotnet ef database update --startup-project "../Presentation"
 
-this will execute the migration script and create the tables on your local environment
+Isso executará o script de migração e criará as tabelas no seu ambiente local.
 
-2. **Connection String**: Update the connection string in `appsettings.json` or `appsettings.Development.json` with your SQL Server details.
+2. **String de Conexão**: Atualize a string de conexão no `appsettings.json` ou `appsettings.Development.json` com os detalhes do seu SQL Server.
 
     ```json
     {
